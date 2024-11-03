@@ -1,0 +1,122 @@
+{
+    "itn5fhV2EbKHQ7JNuT6l-3": {
+        "type": "class",
+        "name": "Human",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "id",
+                "type": "int"
+            },
+            "2": {
+                "access": "public",
+                "name": "name",
+                "type": "String"
+            },
+            "3": {
+                "access": "public",
+                "name": "age",
+                "type": "int"
+            }
+        },
+        "methods": {},
+        "relationships": {
+            "implements": [],
+            "extends": [],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    },
+    "itn5fhV2EbKHQ7JNuT6l-7": {
+        "type": "class",
+        "name": "Student",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "school",
+                "type": "String"
+            },
+            "2": {
+                "access": "public",
+                "name": "student_id",
+                "type": "int"
+            }
+        },
+        "methods": {
+            "1": {
+                "access": "public",
+                "name": "score",
+                "return_type": "double"
+            }
+        },
+        "relationships": {
+            "implements": [],
+            "extends": [
+                "itn5fhV2EbKHQ7JNuT6l-3"
+            ],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    },
+    "rfMGgx3qdHKI_bcX_o7W-1": {
+        "type": "class",
+        "name": "Teacher",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "school",
+                "type": "String"
+            },
+            "2": {
+                "access": "public",
+                "name": "salary",
+                "type": "double"
+            }
+        },
+        "methods": {
+            "1": {
+                "access": "public",
+                "name": "gradescore",
+                "return_type": "double"
+            }
+        },
+        "relationships": {
+            "implements": [],
+            "extends": [
+                "itn5fhV2EbKHQ7JNuT6l-3"
+            ],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    },
+    "jhfzLjNJNbqlkXUEN5gs-24": {
+        "type": "class",
+        "name": "Employee",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "salary",
+                "type": "double"
+            }
+        },
+        "methods": {
+            "1": {
+                "access": "public",
+                "name": "getName",
+                "return_type": "String"
+            }
+        },
+        "relationships": {
+            "implements": [],
+            "extends": [
+                "itn5fhV2EbKHQ7JNuT6l-3"
+            ],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    }
+}
