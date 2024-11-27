@@ -1,0 +1,80 @@
+{
+    "root": {
+        "id": "1",
+        "parent_id": "0",
+        "cells": {
+            "8mSkRPjBfspn0f9VqslR-22": {
+                "id": "8mSkRPjBfspn0f9VqslR-22",
+                "parent_id": "1",
+                "style": {
+                    "type": "swimlane",
+                    "fontStyle": "1",
+                    "align": "center",
+                    "verticalAlign": "top",
+                    "childLayout": "stackLayout",
+                    "horizontal": "1",
+                    "startSize": "26",
+                    "horizontalStack": "0",
+                    "resizeParent": "1",
+                    "resizeParentMax": "0",
+                    "resizeLast": "0",
+                    "collapsible": "1",
+                    "marginBottom": "0",
+                    "whiteSpace": "wrap",
+                    "html": "1"
+                },
+                "values": [
+                    "<spanstyle=\"font",
+                    "-weight:400;\">Human</span>"
+                ]
+            },
+            "8mSkRPjBfspn0f9VqslR-23": {
+                "id": "8mSkRPjBfspn0f9VqslR-23",
+                "parent_id": "8mSkRPjBfspn0f9VqslR-22",
+                "style": {
+                    "type": "text",
+                    "strokeColor": "none",
+                    "fillColor": "none",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest",
+                    "whiteSpace": "wrap",
+                    "html": "1"
+                },
+                "values": [
+                    "+name:String<div>",
+                    "-age:int</div><div>",
+                    "#id:String<br><div><br></div></div>"
+                ]
+            },
+            "8mSkRPjBfspn0f9VqslR-24": {
+                "id": "8mSkRPjBfspn0f9VqslR-24",
+                "parent_id": "8mSkRPjBfspn0f9VqslR-22",
+                "style": {
+                    "type": "line",
+                    "strokeWidth": "1",
+                    "fillColor": "none",
+                    "align": "left",
+                    "verticalAlign": "middle",
+                    "spacingTop": "-1",
+                    "spacingLeft": "3",
+                    "spacingRight": "3",
+                    "rotatable": "0",
+                    "labelPosition": "right",
+                    "points": "[]",
+                    "portConstraint": "eastwest",
+                    "strokeColor": "inherit"
+                },
+                "values": [
+                    ""
+                ]
+            }
+        },
+        "relationships": {}
+    }
+}
