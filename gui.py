@@ -5,7 +5,7 @@ import json
 from decode.convert_to_readable import DecodeAndDecompress
 from parsers.style_parser import StyleParser
 from parsers.syntax_parser import SyntaxParser
-from generators.java_generator import JavaCodeGenerator
+from java_generator import JavaCodeGenerator
 
 def json_to_file(file_name, data):
     with open(file_name, "w") as f:
@@ -69,7 +69,6 @@ class DiagramConverterGUI(QWidget):
             
                 java_code_gen = JavaCodeGenerator(syntax_tree, "examples/example_code")
                 java_code_gen.generate_code()
-                
                 QMessageBox.information(self, "Success", "File converted and JSON and Java code generated successfully!")
 
             except Exception as e:

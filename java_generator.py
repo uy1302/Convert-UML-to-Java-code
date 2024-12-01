@@ -51,7 +51,7 @@ class JavaCodeGenerator(CodeGeneratorInterface):
                 self.__files.append([_class['name'], file])
 
             self.generate_files()
-        
+
         except Exception as e:
             print(f"JavaCodeGenerator.generate_code ERROR: {e}")
 
@@ -187,7 +187,9 @@ class JavaCodeGenerator(CodeGeneratorInterface):
         try:
             for file in self.get_files():
                 file_name = file[0] + ".java"
+                # print(file_name)
                 file_contents = file[1]
+                # print(file_contents)
                 with open(self.file_path + f"/{file_name}", "w") as f:
                     f.write(file_contents)
         except Exception as e:
