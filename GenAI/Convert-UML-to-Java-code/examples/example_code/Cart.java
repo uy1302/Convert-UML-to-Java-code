@@ -11,42 +11,42 @@ public class Cart {
 	
 	public float totalCost() {
 		float total = 0;
-		for(Media item : itemsOrdered){
-			total += item.getCost();
+		for(Media media : itemsOrdered){
+			total += media.getCost();
 		}
 		return total;
 	}
 	
 	public void getAllTitles() {
-		for(Media item : itemsOrdered){
-			System.out.println(item.getTitle());
+		for(Media media : itemsOrdered){
+			System.out.println(media.getTitle());
 		}
 	}
 	
 	public void print() {
-		for(Media item : itemsOrdered){
-			System.out.println(item);
+		for(Media media : itemsOrdered){
+			System.out.println(media);
 		}
 	}
 	
 	public void search(int id) {
-		for(Media item : itemsOrdered){
-			if(item.getId() == id){
-				System.out.println(item);
+		for(Media media : itemsOrdered){
+			if(media.getId() == id){
+				System.out.println(media);
 				return;
 			}
 		}
-		System.out.println("Media not found.");
+		System.out.println("Media not found");
 	}
 	
 	public void search(String title) {
-		for(Media item : itemsOrdered){
-			if(item.getTitle().equals(title)){
-				System.out.println(item);
+		for(Media media : itemsOrdered){
+			if(media.getTitle().equals(title)){
+				System.out.println(media);
 				return;
 			}
 		}
-		System.out.println("Media not found.");
+		System.out.println("Media not found");
 	}
 	
 	public void sortByTitleCost() {

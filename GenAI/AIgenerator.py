@@ -1,7 +1,6 @@
 import google.generativeai as genai
 import os
 import requests
-from API import send_data
 
 class AIagent():
 
@@ -27,7 +26,7 @@ class AIagent():
 		return self.postProcessResponses(response)
 
 	def postProcessResponses(self, response):
-		return_text = response.text.split("\n")[1:-1]
+		return_text = response.text.split("\n")[1:-2]
 		return_file = []
 		i = 0
 		while i < len(return_text):
@@ -163,8 +162,8 @@ public class Cart {
 				"methods": {
 					"start": "void start()",
 					"stop": "void stop()",
-					"accelerate": "void accelerate(double increment)",
-					"brake": "void brake(double decrement)"
+					"accelerate": "void accelerate(doubleincrement)",
+					"brake": "void brake(doubledecrement)"
 				}
 			},
 			"public class Car": {
@@ -173,8 +172,8 @@ public class Cart {
 					"seatingCapacity": "private int seatingCapacity"
 				},
 				"methods": {
-					"playMusic": "void playMusic(String songName)",
-					"enableCruiseControl": "void enableCruiseControl(double speed)"
+					"playMusic": "void playMusic(StringsongName)",
+					"enableCruiseControl": "void enableCruiseControl(doublespeed)"
 				}
 			},
 			"public class ElectricCar": {
@@ -184,8 +183,8 @@ public class Cart {
 					"chargingPortType": "private String chargingPortType"
 				},
 				"methods": {
-					"chargeBattery": "void chargeBattery(double hours)",
-					"regeneratePower": "void regeneratePower(double energy)"
+					"chargeBattery": "void chargeBattery(doublehours)",
+					"regeneratePower": "void regeneratePower(doubleenergy)"
 				}
 			}
 		}
@@ -205,7 +204,3 @@ public class Cart {
 				os.makedirs(os.path.dirname(write_path), exist_ok=True)
 				with open(write_path, "x") as f:
 					f.write(file_contents)
-			send_data(file_name, file_contents)
-			url = f"http://127.0.0.1:8000/classes/{file_name}"
-			response = requests.get(url)
-			print("Response:", response.text)

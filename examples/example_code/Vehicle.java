@@ -5,16 +5,16 @@ public class Vehicle {
 	private double speed;
 
 	void start(){
-		System.out.println("Engine started.");
+		speed = 0;
 	}
 	void stop(){
 		speed = 0;
-		System.out.println("Engine stopped.");
 	}
 	void accelerate(double increment){
 		speed += increment;
 	}
 	void brake(double decrement){
-		speed = Math.max(0, speed - decrement);
+		speed -= decrement;
+		if(speed < 0) speed = 0;
 	}
 }

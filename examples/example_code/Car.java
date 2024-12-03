@@ -3,9 +3,9 @@ public class Car {
 	private int seatingCapacity;
 
 	void playMusic(String songName){
-		System.out.println("Playing " + songName + " on " + entertainmentSystem);
+		// Assume some implementation to play music
 	}
 	void enableCruiseControl(double speed){
-		System.out.println("Cruise control engaged at " + speed + " km/h");
+		// Assume some implementation to enable cruise control
 	}
 }

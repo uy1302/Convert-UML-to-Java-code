@@ -1,15 +1,19 @@
 from GenAI.AIgenerator import AIagent
 import os 
 import requests
-from API import send_data
+import urllib.parse
+import time 
 
 agent = AIagent(api_key="AIzaSyD7UJTPn6veFbiKhgDydYTgrDR14D9Grf4")
 
 descriptions = {
         "public class Vehicle": {
-            "start": "The Vehicle initializes its engine and prepares all systems for operation.",
-            "stop": "The Vehicle powers down its engine and deactivates non-essential systems.",
-            "accelerate": "The Vehicle increases its speed by applying more power to its drivetrain.",
+            # "start": "The Vehicle initializes its engine and prepares all systems for operation.",
+            "start" : "",
+            # "stop": "The Vehicle powers down its engine and deactivates non-essential systems.",
+            "stop" : "",
+            # "accelerate": "The Vehicle increases its speed by applying more power to its drivetrain.",
+            "accelerate":"",
             "brake": "The Vehicle slows down or comes to a stop by applying its braking mechanism."
         },
         "public class Car": {
@@ -60,8 +64,9 @@ classes = {
     }
 }
 
+url = "http://127.0.0.1:8000"
 res = agent.generateCodeByDescriptions(descriptions, classes)
-print(res)
+# print(res)
 for file in res:
     file_name = file[0] + ".java"
     # print(file_name)
@@ -75,10 +80,15 @@ for file in res:
         os.makedirs(os.path.dirname(write_path), exist_ok=True)
         with open(write_path, "x") as f:
             f.write(file_contents)
-    send_data(file[0], file_contents)
-    print(file[0])
-    print(file_contents)
-    url = f"http://127.0.0.1:8000/classes/{file[0]}?file_content={file_contents}"
-    print(url)
-    response = requests.get(url)
+    # print(file[0])
+    # print(file_contents)
+    # print(url)
+    response = requests.post(
+        f"{url}/send_data", 
+        json={"Content": file_contents}
+    )
     print("Response:", response.text)
+
+
+# response = requests.post(f"{url}/clear_data", json={})
+# print("Response:", response.text)
