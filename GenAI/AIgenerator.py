@@ -26,7 +26,7 @@ class AIagent():
 		return self.postProcessResponses(response)
 
 	def postProcessResponses(self, response):
-		return_text = response.text.split("\n")[1:-2]
+		return_text = response.text.replace("```","").split("\n")[1:-1]
 		return_file = []
 		i = 0
 		while i < len(return_text):
