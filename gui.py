@@ -49,7 +49,7 @@ class DiagramConverterGUI(QWidget):
         self.setGeometry(300, 300, 400, 200)
 
     def select_and_convert_file(self):
-        file_path, _ = QFileDialog.getOpenFileName(self, "Select .drawio file", "", "Draw.io Files (*.drawio)")
+        file_path, _ = QFileDialog.getOpenFileName(self, "Select .drawio file", "", "drawio Files (*.drawio)")
         if file_path:
             try:
             
