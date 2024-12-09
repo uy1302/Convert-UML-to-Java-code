@@ -126,7 +126,11 @@ class JavaCodeGenerator(CodeGeneratorInterface):
         
         methods_string = ""
         for _, method_value in methods.items():
-            m = f"\t{method_value['access']} {method_value['return_type']} {method_value['name']}() {{}}\n";
+            if '(' in method_value['name']:
+                m = f"\t{method_value['access']} {method_value['return_type']} {method_value['name']} {{}}\n"
+            else:
+                m = f"\t{method_value['access']} {method_value['return_type']} {method_value['name']}() {{}}\n"
+            
             methods_string += m + "\n"
             self.__methods.append(m)
 
