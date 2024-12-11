@@ -49,7 +49,7 @@ class JavaCodeGenerator(CodeGeneratorInterface):
                 file += self.generate_methods(_class['methods'], _class['properties'], _class['type'], interface_methods)
                 file += "}\n" 
                 self.__files.append([_class['name'], file])
-                print(file)
+
             self.generate_files()
 
         except Exception as e:
