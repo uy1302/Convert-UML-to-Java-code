@@ -7,7 +7,7 @@ import java.util.List;
 
 import java.io.*;
 
-public class testAPI {
+public class APItester {
 	 public static void main(String[] args) {
 			String apiUrl = "http://127.0.0.1:8000";
 			String descriptions = "{\"public class Vehicle\" :" +
