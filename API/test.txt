@@ -8,4 +8,4 @@ playMusic: The Car's entertainment system plays music for the passengers.
 enableCruiseControl: The Car maintains a steady speed without driver input through its cruise control system.
 public class ElectricCar
 chargeBattery: The ElectricCar connects to a charging station to replenish its battery.
-regerenatePower: The ElectricCar converts kinetic energy into electrical energy during braking to recharge the battery.
+regeneratePower: The ElectricCar converts kinetic energy into electrical energy during braking to recharge the battery.

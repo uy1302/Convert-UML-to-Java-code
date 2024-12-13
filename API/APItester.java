@@ -4,23 +4,25 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class APItester {
 	 public static void main(String[] args) {
 			String apiUrl = "http://127.0.0.1:8000";
-			String descriptions = "{\"public class Vehicle\" :" +
-									"{\"start\":\"The Vehicle initializes its engine and prepares all systems for operation.\"," +
-									"\"stop\": \"The Vehicle powers down its engine and deactivates non-essential systems.\","+
-									"\"accelerate\": \"The Vehicle increases its speed by applying more power to its drivetrain.\","+
-									"\"brake\": \"The Vehicle slows down or comes to a stop by applying its braking mechanism.\"}," +
-								"\"public class Car\" :"+
-									"{\"playMusic\": \"The Car's entertainment system plays music for the passengers.\","+
-									"\"enableCruiseControl\": \"The Car maintains a steady speed without driver input through its cruise control system.\"},"+
-								"\"public class ElectricCar\" :"+
-								" {\"chargeBattery\": \"The ElectricCar connects to a charging station to replenish its battery.\","+
-								" \"regeneratePower\": \"The ElectricCar converts kinetic energy into electrical energy during braking to recharge the battery.\"}}";
+			// String descriptions = "{\"public class Vehicle\" :" +
+			// 						"{\"start\":\"The Vehicle initializes its engine and prepares all systems for operation.\"," +
+			// 						"\"stop\": \"The Vehicle powers down its engine and deactivates non-essential systems.\","+
+			// 						"\"accelerate\": \"The Vehicle increases its speed by applying more power to its drivetrain.\","+
+			// 						"\"brake\": \"The Vehicle slows down or comes to a stop by applying its braking mechanism.\"}," +
+			// 					"\"public class Car\" :"+
+			// 						"{\"playMusic\": \"The Car's entertainment system plays music for the passengers.\","+
+			// 						"\"enableCruiseControl\": \"The Car maintains a steady speed without driver input through its cruise control system.\"},"+
+			// 					"\"public class ElectricCar\" :"+
+			// 					" {\"chargeBattery\": \"The ElectricCar connects to a charging station to replenish its battery.\","+
+			// 					" \"regeneratePower\": \"The ElectricCar converts kinetic energy into electrical energy during braking to recharge the battery.\"}}";
+			String descriptions = readFiletoJson("test.txt");
 			String classes =  "{" + //
 			"    \"public class Vehicle\": {" + //
 			"        \"attributes\": {" + //
@@ -58,6 +60,8 @@ public class APItester {
 			"        }" + //
 			"    }" + //
 			"}";
+			 System.out.println(descriptions);
+			 System.out.println(classes);
 			postAPI(descriptions, classes);
 
             try {
@@ -87,7 +91,7 @@ public class APItester {
 	            
 	            // Get the response code to check if the request was successful
 	            int responseCode = connection.getResponseCode();
-	            System.out.println("Response Code: " + responseCode);
+	             System.out.println("Response Code: " + responseCode);
 
 	            // Read the response (if successful, status code is 200)
 	            if (responseCode == HttpURLConnection.HTTP_OK) { // success
@@ -114,7 +118,58 @@ public class APItester {
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
-	    }
+	}
+
+	public static String readFiletoJson(String filename){
+		String descriptionString = readFileAsString("test.txt");
+			String[] lines = descriptionString.split("\n");
+			StringBuilder jsonBuilder = new StringBuilder();
+			jsonBuilder.append("{");
+
+			String currentClass = null;
+			boolean isFirstClass = true;
+
+			for (String line : lines) {
+				line = line.trim();
+
+				if (line.startsWith("public class")) {
+					// Close the previous class object
+					if (currentClass != null) {
+						jsonBuilder.append("},");
+					}
+
+					// Start a new class object
+					currentClass = line;
+					if (!isFirstClass) {
+						jsonBuilder.append("\n");
+					}
+					isFirstClass = false;
+
+					jsonBuilder.append("\"").append(currentClass).append("\": {");
+				} else if (!line.isEmpty()) {
+					String[] parts = line.split(":");
+					if (parts.length == 2) {
+						String methodName = parts[0].trim();
+						String description = parts[1].trim();
+
+						jsonBuilder.append("\n    \"")
+								.append(methodName).append("\": \"")
+								.append(description).append("\",");
+					}
+				}
+			}
+
+			int lastCommaIndex = jsonBuilder.lastIndexOf(",");
+			if (lastCommaIndex != -1) {
+				jsonBuilder.deleteCharAt(lastCommaIndex);
+			}
+
+			jsonBuilder.append("\n  }\n}");
+			String jsonString = jsonBuilder.toString();
+			jsonString = jsonString.replaceAll(",(\\s*})", "$1"); // Removes commas before '}'
+        	jsonString = jsonString.replaceAll(",(\\s*])", "$1"); // Handles arrays if present in the future
+			return jsonString;
+	}
 
 	public static void postAPI(String descriptions, String classes){
 		String apiUrl = "http://127.0.0.1:8000";
@@ -141,7 +196,7 @@ public class APItester {
 			}
 
 			int responseCode = connection.getResponseCode();
-			System.out.println("Response Code: " + responseCode);
+			// System.out.println("Response Code: " + responseCode);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -163,5 +218,15 @@ public class APItester {
 
         return contents;
     }
-}
 
+	public static String readFileAsString(String filePath) {
+        try {
+            // Read all lines and join them with newline characters
+            List<String> lines = Files.readAllLines(Paths.get(filePath));
+            return String.join("\n", lines);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
