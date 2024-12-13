@@ -1,0 +1,343 @@
+{
+    "root": {
+        "id": "WIyWlLk6GJQsqaUBKTNV-1",
+        "parent_id": "WIyWlLk6GJQsqaUBKTNV-0",
+        "cells": {
+            "zkfFHV4jXpPFQw0GAbJ--0": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--0",
+                "parent_id": "WIyWlLk6GJQsqaUBKTNV-1",
+                "style": {
+                    "type": "swimlane",
+                    "fontStyle": "0",
+                    "align": "center",
+                    "verticalAlign": "top",
+                    "childLayout": "stackLayout",
+                    "horizontal": "1",
+                    "startSize": "26",
+                    "horizontalStack": "0",
+                    "resizeParent": "1",
+                    "resizeLast": "0",
+                    "collapsible": "1",
+                    "marginBottom": "0",
+                    "rounded": "0",
+                    "shadow": "0",
+                    "strokeWidth": "1"
+                },
+                "values": [
+                    "Person"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--1": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--1",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    "+name:String"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--2": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--2",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest",
+                    "rounded": "0",
+                    "shadow": "0",
+                    "html": "0"
+                },
+                "values": [
+                    "+id:int"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--3": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--3",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest",
+                    "rounded": "0",
+                    "shadow": "0",
+                    "html": "0"
+                },
+                "values": [
+                    "+address:String"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--4": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--4",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "type": "line",
+                    "html": "1",
+                    "strokeWidth": "1",
+                    "align": "left",
+                    "verticalAlign": "middle",
+                    "spacingTop": "-1",
+                    "spacingLeft": "3",
+                    "spacingRight": "3",
+                    "rotatable": "0",
+                    "labelPosition": "right",
+                    "points": "[]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    ""
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--5": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--5",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    "+method1(intid):int"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--6": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--6",
+                "parent_id": "WIyWlLk6GJQsqaUBKTNV-1",
+                "style": {
+                    "type": "swimlane",
+                    "fontStyle": "0",
+                    "align": "center",
+                    "verticalAlign": "top",
+                    "childLayout": "stackLayout",
+                    "horizontal": "1",
+                    "startSize": "26",
+                    "horizontalStack": "0",
+                    "resizeParent": "1",
+                    "resizeLast": "0",
+                    "collapsible": "1",
+                    "marginBottom": "0",
+                    "rounded": "0",
+                    "shadow": "0",
+                    "strokeWidth": "1"
+                },
+                "values": [
+                    "Student"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--7": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--7",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--6",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    "+studentNumber:int"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--8": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--8",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--6",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest",
+                    "rounded": "0",
+                    "shadow": "0",
+                    "html": "0"
+                },
+                "values": [
+                    "+avgMark:float"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--9": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--9",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--6",
+                "style": {
+                    "type": "line",
+                    "html": "1",
+                    "strokeWidth": "1",
+                    "align": "left",
+                    "verticalAlign": "middle",
+                    "spacingTop": "-1",
+                    "spacingLeft": "3",
+                    "spacingRight": "3",
+                    "rotatable": "0",
+                    "labelPosition": "right",
+                    "points": "[]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    ""
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--10": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--10",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--6",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest",
+                    "fontStyle": "0"
+                },
+                "values": [
+                    "+isEigible(intstudentNumber,doublescore):boolean"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--11": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--11",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--6",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    "+getName:Constructor"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--13": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--13",
+                "parent_id": "WIyWlLk6GJQsqaUBKTNV-1",
+                "style": {
+                    "type": "swimlane",
+                    "fontStyle": "0",
+                    "align": "center",
+                    "verticalAlign": "top",
+                    "childLayout": "stackLayout",
+                    "horizontal": "1",
+                    "startSize": "26",
+                    "horizontalStack": "0",
+                    "resizeParent": "1",
+                    "resizeLast": "0",
+                    "collapsible": "1",
+                    "marginBottom": "0",
+                    "rounded": "0",
+                    "shadow": "0",
+                    "strokeWidth": "1"
+                },
+                "values": [
+                    "Professor"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--14": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--14",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--13",
+                "style": {
+                    "type": "text",
+                    "align": "left",
+                    "verticalAlign": "top",
+                    "spacingLeft": "4",
+                    "spacingRight": "4",
+                    "overflow": "hidden",
+                    "rotatable": "0",
+                    "points": "[[0,0.5],[1,0.5]]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    "+salary:int"
+                ]
+            },
+            "zkfFHV4jXpPFQw0GAbJ--15": {
+                "id": "zkfFHV4jXpPFQw0GAbJ--15",
+                "parent_id": "zkfFHV4jXpPFQw0GAbJ--13",
+                "style": {
+                    "type": "line",
+                    "html": "1",
+                    "strokeWidth": "1",
+                    "align": "left",
+                    "verticalAlign": "middle",
+                    "spacingTop": "-1",
+                    "spacingLeft": "3",
+                    "spacingRight": "3",
+                    "rotatable": "0",
+                    "labelPosition": "right",
+                    "points": "[]",
+                    "portConstraint": "eastwest"
+                },
+                "values": [
+                    ""
+                ]
+            }
+        },
+        "relationships": {
+            "geiDqFKdWYyGrhLrPXL--0": {
+                "id": "geiDqFKdWYyGrhLrPXL--0",
+                "parent_id": "WIyWlLk6GJQsqaUBKTNV-1",
+                "source": "zkfFHV4jXpPFQw0GAbJ--6",
+                "target": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "endArrow": "block",
+                    "endSize": "16",
+                    "endFill": "0",
+                    "html": "1",
+                    "rounded": "0"
+                }
+            },
+            "geiDqFKdWYyGrhLrPXL--1": {
+                "id": "geiDqFKdWYyGrhLrPXL--1",
+                "parent_id": "WIyWlLk6GJQsqaUBKTNV-1",
+                "source": "zkfFHV4jXpPFQw0GAbJ--13",
+                "target": "zkfFHV4jXpPFQw0GAbJ--0",
+                "style": {
+                    "endArrow": "block",
+                    "endSize": "16",
+                    "endFill": "0",
+                    "html": "1",
+                    "rounded": "0"
+                }
+            }
+        }
+    }
+}

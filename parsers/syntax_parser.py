@@ -8,6 +8,7 @@ class SyntaxParser:
 
   def __init__(self, style_tree):
     self.style_tree = style_tree
+    self.class_lst = ['int','String','double','float','char','boolean']
 
   def convert_to_sytax_tree(self):
     """
@@ -96,11 +97,12 @@ class SyntaxParser:
       
 
     if "fontStyle" in main_cell['style'] and main_cell['style']['fontStyle'] == "2": 
-      # if the fontStyle is italic, then it is an abstract class
       template['type'] = "abstract"
     elif template['name'].lower().startswith("<<interface>>"):
       template['type'] = "interface"
       template['name'] = template['name'][13:]
+    if template['name'] not in self.class_lst:
+      self.class_lst.append(template['name'])
 
     return template
 
@@ -161,11 +163,22 @@ class SyntaxParser:
       val = val.strip()
       access_modifier_symbol = val[0]
       temp_val = val[1:].split(":")
+      # class_lst = ['int','String','double','float','char','boolean']
+      if '(' in temp_val[0]:  
+          idx = temp_val[0].index('(')
+          param = temp_val[0][idx + 1:-1]
+          param_list = param.split(',') if param else []  
+          for i in range(len(param_list)):
+              for x in self.class_lst:
+                  if param_list[i].strip().startswith(x):
+                      param_list[i] = param_list[i].replace(x, x + " ")
+          param = ', '.join(param_list)
+          temp_val[0] = temp_val[0][:idx + 1] + param + ')'
 
       template[_id] = {
-        'access': self._get_access_modifier(access_modifier_symbol),
-        'name': temp_val[0].strip(),
-        'return_type': temp_val[1].strip() if len(temp_val) > 1 else "void",
+          'access': self._get_access_modifier(access_modifier_symbol),
+          'name': temp_val[0].strip(),
+          'return_type': temp_val[1].strip() if len(temp_val) > 1 else "void",
       }
 
     return template

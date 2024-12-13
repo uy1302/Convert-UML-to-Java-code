@@ -1,0 +1,7 @@
+Person:
+method1: get a gf
+
+
+Student:
+isEigible: 
+getScore: use attribute id to return score 

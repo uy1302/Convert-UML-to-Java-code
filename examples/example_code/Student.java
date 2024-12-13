@@ -1,8 +1,10 @@
-public class Student extends Human {
+public class Student extends Person {
 
-	public String school;
-	public int student_id;
+	public int studentNumber;
+	public float avgMark;
 
-	public double score() {}
+	public boolean isEigible(int studentNumber, double score) {}
+
+	public Constructor getName() {}
 
 }
