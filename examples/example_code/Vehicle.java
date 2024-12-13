@@ -13,9 +13,11 @@ public class Vehicle {
 	}
 	void accelerate(double increment){
 		speed += increment;
+		System.out.println("Speed increased to: " + speed);
 	}
 	void brake(double decrement){
 		speed -= decrement;
-		if (speed < 0) speed = 0;
+		if(speed < 0) speed = 0;
+		System.out.println("Speed decreased to: " + speed);
 	}
 }

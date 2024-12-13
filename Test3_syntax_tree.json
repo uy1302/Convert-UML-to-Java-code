@@ -1,0 +1,95 @@
+{
+    "zkfFHV4jXpPFQw0GAbJ--0": {
+        "type": "class",
+        "name": "Person",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "name",
+                "type": "String"
+            },
+            "2": {
+                "access": "public",
+                "name": "id",
+                "type": "int"
+            },
+            "3": {
+                "access": "public",
+                "name": "address",
+                "type": "String"
+            }
+        },
+        "methods": {
+            "1": {
+                "access": "public",
+                "name": "method1(int id)",
+                "return_type": "int"
+            }
+        },
+        "relationships": {
+            "implements": [],
+            "extends": [],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    },
+    "zkfFHV4jXpPFQw0GAbJ--6": {
+        "type": "class",
+        "name": "Student",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "studentNumber",
+                "type": "int"
+            },
+            "2": {
+                "access": "public",
+                "name": "avgMark",
+                "type": "float"
+            }
+        },
+        "methods": {
+            "1": {
+                "access": "public",
+                "name": "isEigible(int studentNumber, double score)",
+                "return_type": "boolean"
+            },
+            "2": {
+                "access": "public",
+                "name": "getName",
+                "return_type": "Constructor"
+            }
+        },
+        "relationships": {
+            "implements": [],
+            "extends": [
+                "zkfFHV4jXpPFQw0GAbJ--0"
+            ],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    },
+    "zkfFHV4jXpPFQw0GAbJ--13": {
+        "type": "class",
+        "name": "Professor",
+        "properties": {
+            "1": {
+                "access": "public",
+                "name": "salary",
+                "type": "int"
+            }
+        },
+        "methods": {},
+        "relationships": {
+            "implements": [],
+            "extends": [
+                "zkfFHV4jXpPFQw0GAbJ--0"
+            ],
+            "association": [],
+            "aggregation": [],
+            "composition": []
+        }
+    }
+}
