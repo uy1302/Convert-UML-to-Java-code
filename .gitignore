@@ -1,4 +1,4 @@
 *.docx
 .vim
 /.metadata/
-__pycache__
+__pycache__/
